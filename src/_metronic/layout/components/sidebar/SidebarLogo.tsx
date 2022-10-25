@@ -22,32 +22,32 @@ const SidebarLogo = () => {
         {config.layoutType === 'dark-sidebar' ? (
           <img
             alt='Logo'
-            src={toAbsoluteUrl('/media/logos/default-dark.svg')}
-            // src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
-            className='h-25px app-sidebar-logo-default' //changed from h-25px to h-35px!
+            // src={toAbsoluteUrl('/media/logos/default-dark.svg')}
+            src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
+            className='h-35px app-sidebar-logo-default' //changed from h-25px to h-35px!
           />
         ) : (
           <>
             <img
               alt='Logo'
-              src={toAbsoluteUrl('/media/logos/default.svg')}
-              // src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
-              className='h-25px app-sidebar-logo-default theme-light-show' //changed from h-25px to h-35px!
+              // src={toAbsoluteUrl('/media/logos/default.svg')}
+              src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
+              className='h-35px app-sidebar-logo-default theme-light-show' //changed from h-25px to h-35px!
             />
             <img
               alt='Logo'
-              src={toAbsoluteUrl('/media/logos/default-dark.svg')}
-              // src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
-              className='h-25px app-sidebar-logo-default theme-dark-show' //changed from h-25px to h-35px!
+              // src={toAbsoluteUrl('/media/logos/default-dark.svg')}
+              src={toAbsoluteUrl('/media/logos/aliships-biglogo3.png')}
+              className='h-35px app-sidebar-logo-default theme-dark-show' //changed from h-25px to h-35px!
             />
           </>
         )}
 
         <img
           alt='Logo'
-          src={toAbsoluteUrl('/media/logos/default-small.svg')}
-          // src={toAbsoluteUrl('/media/logos/ALiships-favicon.png')}
-          className='h-20px app-sidebar-logo-minimize' //changed from h-20px to h-25px!
+          // src={toAbsoluteUrl('/media/logos/default-small.svg')}
+          src={toAbsoluteUrl('/media/logos/ALiships-favicon.png')}
+          className='h-30px app-sidebar-logo-minimize' //changed from h-20px to h-30px!
         />
       </Link>
 

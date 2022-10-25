@@ -39,9 +39,9 @@ const CardsWidget17: FC<Props> = ({
       <div className='card-header pt-5'>
         <div className='card-title d-flex flex-column'>
           <div className='d-flex align-items-center'>
-            <span className='fs-4 fw-semibold text-gray-400 me-1 align-self-start'>$</span>
+            {/* <span className='fs-4 fw-semibold text-gray-400 me-1 align-self-start'>$</span> */}
 
-            <span className='fs-2hx fw-bold text-dark me-2 lh-1 ls-n2'>69,700</span>
+            <span className='fs-2hx fw-bold text-dark me-2 lh-1 ls-n2'>90%</span>
 
             <span className='badge badge-light-success fs-base'>
               <KTSVG
@@ -51,7 +51,7 @@ const CardsWidget17: FC<Props> = ({
               2.2%
             </span>
           </div>
-          <span className='text-gray-400 pt-1 fw-semibold fs-6'>Projects Earnings in April</span>
+          <span className='text-gray-400 pt-1 fw-semibold fs-4'>Total Methods Imported Mapping</span>
         </div>
       </div>
 
@@ -69,21 +69,21 @@ const CardsWidget17: FC<Props> = ({
         <div className='d-flex flex-column content-justify-center flex-row-fluid'>
           <div className='d-flex fw-semibold align-items-center'>
             <div className='bullet w-8px h-3px rounded-2 bg-success me-3'></div>
-            <div className='text-gray-500 flex-grow-1 me-4'>Leaf CRM</div>
-            <div className='fw-bolder text-gray-700 text-xxl-end'>$7,660</div>
+            <div className='text-gray-500 flex-grow-1 me-4'>AliExpress</div>
+            <div className='fw-bolder text-gray-700 text-xxl-end'>55%</div>
           </div>
           <div className='d-flex fw-semibold align-items-center my-3'>
             <div className='bullet w-8px h-3px rounded-2 bg-primary me-3'></div>
-            <div className='text-gray-500 flex-grow-1 me-4'>Mivy App</div>
-            <div className='fw-bolder text-gray-700 text-xxl-end'>$2,820</div>
+            <div className='text-gray-500 flex-grow-1 me-4'>Ebay</div>
+            <div className='fw-bolder text-gray-700 text-xxl-end'>26%</div>
           </div>
           <div className='d-flex fw-semibold align-items-center'>
             <div
               className='bullet w-8px h-3px rounded-2 me-3'
               style={{backgroundColor: '#E4E6EF'}}
             ></div>
-            <div className='text-gray-500 flex-grow-1 me-4'>Others</div>
-            <div className=' fw-bolder text-gray-700 text-xxl-end'>$45,257</div>
+            <div className='text-gray-500 flex-grow-1 me-4'>Custom Rates</div>
+            <div className=' fw-bolder text-gray-700 text-xxl-end'>9%</div>
           </div>
         </div>
       </div>

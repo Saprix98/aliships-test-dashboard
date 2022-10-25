@@ -11,50 +11,88 @@ import {
   TablesWidget5,
   TablesWidget10,
   MixedWidget8,
-  CardsWidget7,
+  // CardsWidget7,
   CardsWidget17,
   CardsWidget20,
-  ListsWidget26,
-  EngageWidget10,
+  CardsWidget21,
+  
+
+  // ListsWidget26,
+  // EngageWidget10,
+
 } from '../../../_metronic/partials/widgets'
+import { VideoWidget1 } from '../../../_metronic/partials/widgets/_new/cards/VideoWidget1'
 
 const DashboardPage: FC = () => (
   <>
     {/* begin::Row */}
     <div className='row g-5 g-xl-10 mb-5 mb-xl-10'>
       {/* begin::Col */}
-      <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10'>
+      <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-4 mb-md-5 mb-xl-10'>
         <CardsWidget20
-          className='h-md-50 mb-5 mb-xl-10'
-          description='Active Projects'
-          color='#F1416C'
+          className='h-md-100 mb-5 mb-xl-10'
+          description='Total Products'
+          color='#f90'
           img={toAbsoluteUrl('/media/patterns/vector-1.png')}
         />
-        <CardsWidget7
+        {/* <CardsWidget7
           className='h-md-50 mb-5 mb-xl-10'
           description='Professionals'
           icon={false}
           stats={357}
           labelColor='dark'
           textColor='gray-300'
+        /> */}
+      </div>
+      {/* end::Col */}
+
+      {/* begin::Col */}
+      <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-4 mb-md-5 mb-xl-10'>
+        <CardsWidget17 
+        className='h-md-100 mb-5 mb-xl-10' 
         />
+        {/* <ListsWidget26 className='h-lg-50' /> */}
       </div>
       {/* end::Col */}
-
+      
       {/* begin::Col */}
-      <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10'>
-        <CardsWidget17 className='h-md-50 mb-5 mb-xl-10' />
-        <ListsWidget26 className='h-lg-50' />
+      <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-4 mb-md-5 mb-xl-10'>
+        <CardsWidget21 
+          className='h-md-100 mb-5 mb-xl-10'
+          description='Active Providers'
+          color='#bd4d4d'
+          img={toAbsoluteUrl('/media/patterns/vector-1.png')}
+        />
+        {/* <ListsWidget26 className='h-lg-50' /> */}
       </div>
-      {/* end::Col */}
+      {/* end::Col */} 
 
       {/* begin::Col */}
-      <div className='col-xxl-6'>
+      {/* <div className='col-xxl-6'>
         <EngageWidget10 className='h-md-100' />
-      </div>
+      </div> */}
       {/* end::Col */}
     </div>
     {/* end::Row */}
+
+
+ {/* begin::Row */}
+ <div className='card row gx-5 gx-xl-10'>
+    <VideoWidget1 
+          className='col-xxl-6 mb-5 mb-xl-10'
+          title='Quick Overview'
+          description1='How to Use?'
+          description2='First Import'
+          description3='How to create Custome rate?'
+          video1='https://www.youtube.com/embed/qIHXpnASPAA'
+          video2='https://www.youtube.com/embed/qIHXpnASPAA'
+          video3='https://www.youtube.com/embed/qIHXpnASPAA'
+          />
+      
+  </div>
+{/* end::Row */}
+
+
 
     {/* begin::Row */}
     <div className='row gx-5 gx-xl-10'>

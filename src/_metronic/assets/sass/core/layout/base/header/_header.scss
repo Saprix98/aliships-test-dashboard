@@ -147,7 +147,7 @@
     // Base
     .app-header {
         @include property( z-index, $app-header-base-z-index-mobile);
-
+        display: inline-grid; //sapir-katz change display from flex - inline-grid
         background-color: var(--kt-app-header-base-bg-color-mobile);
         box-shadow: var(--kt-app-header-base-box-shadow-mobile);
         border-bottom: var(--kt-app-header-base-border-bottom-mobile);

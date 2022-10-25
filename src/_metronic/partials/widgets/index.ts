@@ -86,7 +86,7 @@ export * from './tiles/TilesWidget5'
 export * from './_new/cards/CardsWidget7'
 export * from './_new/cards/CardsWidget17'
 export * from './_new/cards/CardsWidget20'
-
+export * from './_new/cards/CardsWidget21'
 export * from './_new/lists/ListsWidget26'
 
 export * from './_new/engage/EngageWidget10'

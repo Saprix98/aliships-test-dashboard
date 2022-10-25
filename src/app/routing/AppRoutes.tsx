@@ -17,13 +17,13 @@ import {App} from '../App'
  *
  * @see https://facebook.github.io/create-react-app/docs/using-the-public-folder
  */
-// const {PUBLIC_URL} = process.env
+const {PUBLIC_URL} = process.env
 
 
 const AppRoutes: FC = () => {
   const {currentUser} = useAuth()
   return (
-    <BrowserRouter basename={'https://main.dwd13bf7t59n2.amplifyapp.com/'}>
+    <BrowserRouter basename={PUBLIC_URL}>
     {/* <BrowserRouter basename='app'> */}
       <Routes>
         <Route element={<App />}>
