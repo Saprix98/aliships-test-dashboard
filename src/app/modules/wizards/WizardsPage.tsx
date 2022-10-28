@@ -39,7 +39,7 @@ const WizardsPage = () => (
           </>
         }
       />
-      <Route index element={<Navigate to='/crafted/pages/wizards/horizontal' />} />
+      <Route index element={<Navigate to='/dashboard' />} />
     </Route>
   </Routes>
 )

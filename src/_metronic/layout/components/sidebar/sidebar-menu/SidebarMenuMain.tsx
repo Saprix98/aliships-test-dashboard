@@ -18,7 +18,7 @@ const SidebarMenuMain = () => {
         fontIcon='bi-app-indicator'
       />
       <SidebarMenuItem
-        to='/builder'
+        to='/get-ships'
         // icon='/media/icons/duotune/general/gen019.svg'
         icon='/media/icons/duotune/coding/cod007.svg'
         title='Get Ships'
@@ -26,7 +26,7 @@ const SidebarMenuMain = () => {
       />
 
       <SidebarMenuItem
-        to='/builder'
+        to='/shipping-companies'
         // icon='/media/icons/duotune/general/gen019.svg'
         icon='/media/icons/duotune/ecommerce/ecm006.svg'
         title='Shipping Companies'

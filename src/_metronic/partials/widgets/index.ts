@@ -34,6 +34,7 @@ export * from './lists/ListsWidget9'
 
 // statistics
 export * from './statistics/StatisticsWidget1'
+export * from './statistics/AddRateWidget1'
 export * from './statistics/StatisticsWidget2'
 export * from './statistics/StatisticsWidget3'
 export * from './statistics/StatisticsWidget4'

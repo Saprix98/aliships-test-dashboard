@@ -79,8 +79,11 @@ const DashboardPage: FC = () => (
  {/* begin::Row */}
  <div className='card row gx-5 gx-xl-10'>
     <VideoWidget1 
-          className='col-xxl-6 mb-5 mb-xl-10'
+          className='col-xxl-12 mb-5 mb-xl-10'
           title='Quick Overview'
+          tab1= 'Outlines keep you honest. They stop you from indulging in poorly thought-out metaphors about driving and keep you focused on the overall structure of your post '
+          tab2= 'Outlines keep you honest. They stop you from indulging in poorly thought-out metaphors about driving and keep you focused on the overall structure of your post '
+          tab3= 'Outlines keep you honest. They stop you from indulging in poorly thought-out metaphors about driving and keep you focused on the overall structure of your post '
           description1='How to Use?'
           description2='First Import'
           description3='How to create Custome rate?'
