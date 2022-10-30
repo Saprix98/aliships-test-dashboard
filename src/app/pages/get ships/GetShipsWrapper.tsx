@@ -5,7 +5,7 @@ import {FC} from 'react'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
 // import {toAbsoluteUrl} from '../../../_metronic/helpers'
 import {
-  StatisticsWidget1,
+  // StatisticsWidget1,
   TablesWidget11,
   CardsWidget17,
   AddRateWidget1
@@ -33,12 +33,12 @@ const GetShipsPage: FC = () => (
    {/* begin::Row */}
    <div className='row g-5 g-xl-8'>
         <div className='h-md-200 col-xl-8'>
-          <StatisticsWidget1
+        <AddRateWidget1
             className='h-md-100 mb-5 mb-xl-10'
             image='abstract-4.svg'
-            title='Import Shipping Methods'
-            time='Last Updated:'
-            description='<b>Date:</b> 24/10/2022 <br><b>Time:</b> 12:00:00 UTC<br/>'
+            title='Create Cutstom Rates'
+            time=''
+            description='Set custom shipping methods for non imported products'
           />
         </div>
 
@@ -62,7 +62,7 @@ const GetShipsPage: FC = () => (
     {/* end::Row */}
 
       {/* begin::Row */}
-       <div className='row g-5 g-xl-8'>
+       {/* <div className='row g-5 g-xl-8'>
         <div className='col-xl-12'>
           <AddRateWidget1
             className='h-md-100 mb-5 mb-xl-10'
@@ -75,7 +75,7 @@ const GetShipsPage: FC = () => (
 
         
 
-      </div>
+      </div> */}
       {/* end::Row */}
       
       {/* begin::Row */}
