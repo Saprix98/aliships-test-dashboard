@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import {KTSVG, toAbsoluteUrl} from '../../../helpers'
+import {ViewMethodsTable} from '../../../../_metronic/partials/widgets'
 
 type Props = {
   className: string
@@ -33,11 +34,10 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
             <thead>
               <tr className='fw-bold text-muted bg-light'>
                 <th className='ps-4 min-w-325px rounded-start'>Product</th>
-                <th className='min-w-125px'>Price</th>
-                <th className='min-w-125px'>Deposit</th>
-                <th className='min-w-200px'>Agent</th>
+                <th className='min-w-150px'>Vender</th>
+                <th className='min-w-150px'>Source</th>
                 <th className='min-w-150px'>Status</th>
-                <th className='min-w-200px text-end rounded-end'></th>
+                <th className='min-w-150px text-end pe-4 rounded-end'> Actions</th>
               </tr>
             </thead>
             {/* end::Table head */}
@@ -75,22 +75,59 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
-                <td>
+                {/* <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
                     Bradly Beal
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
-                </td>
+                </td> */}
                 <td>
                   <span className='badge badge-light-primary fs-7 fw-semibold'>Approved</span>
                 </td>
                 <td className='text-end'>
                   <a
                     href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
+                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1' data-bs-toggle="modal"  data-bs-target="#kt_modal_view_methods"
                   >
                     <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
                   </a>
+                   {/* begin::Action Modal Box*/}
+
+                        <div className="modal fade" tabIndex={-1} id="kt_modal_view_methods">
+                          <div className="modal-dialog">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h5 className="modal-title">Select Country: </h5>
+                                <select className="form-select form-select-solid w-50" aria-label="Select example">
+                                    <option value="1">Israel</option>
+                                    <option value="2">United States</option>
+                                    <option value="3">Italy</option>
+                                    <option value="4">Spain</option>
+                                  </select>
+                                <div
+                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <KTSVG
+                                    path="/media/icons/duotune/arrows/arr061.svg"
+                                    className="svg-icon svg-icon-2x"
+                                  />
+                                </div>
+                              </div>
+                              <div className="text-start modal-body">
+                                <div className='israel-results'>
+                                   <ViewMethodsTable className='mb-5 mb-xl-8'/>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   {/* end::Action Modal Box */}
+
+
+                  
                   <a
                     href='#'
                     className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
@@ -134,12 +171,12 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
-                <td>
+                {/* <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
                     Chris Thompson
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>NBA Player</span>
-                </td>
+                </td> */}
                 <td>
                   <span className='badge badge-light-danger fs-7 fw-semibold'>In Progress</span>
                 </td>
@@ -193,12 +230,12 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
-                <td>
+                {/* <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
                     Zoey McGee
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Ruby Developer</span>
-                </td>
+                </td> */}
                 <td>
                   <span className='badge badge-light-success fs-7 fw-semibold'>Success</span>
                 </td>
@@ -252,12 +289,12 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
-                <td>
+                {/* <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
                     Brandon Ingram
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
-                </td>
+                </td> */}
                 <td>
                   <span className='badge badge-light-info fs-7 fw-semibold'>Rejected</span>
                 </td>
@@ -311,12 +348,12 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Rejected</span>
                 </td>
-                <td>
+                {/* <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
                     Natali Trump
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
-                </td>
+                </td> */}
                 <td>
                   <span className='badge badge-light-warning fs-7 fw-semibold'>Approved</span>
                 </td>

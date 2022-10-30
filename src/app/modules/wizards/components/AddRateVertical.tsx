@@ -70,7 +70,7 @@ const AddRateVertical = () => {
                                 </div>
                               </div>
                           
-                              <div className="text-start modal-body overflow-scroll mh-xl-100 mh-600px ">
+                              <div className="text-start modal-body overflow-scroll mh-xl-100 mh-500px ">
                               <div
                                   ref={stepperRef}
                                   className='stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid'
@@ -215,17 +215,18 @@ const AddRateVertical = () => {
                                               </div>
 
                                               <div>
-                                                <button type='submit' className='btn btn-sm btn-primary me-3' form='kt_create_account_form'>
-                                                  <span className='indicator-label'
-                                                        data-bs-dismiss={`${stepper.current?.currentStepIndex ===
-                                                          stepper.current?.totatStepsNumber!  && 'modal'}`}
-                                                         aria-label="Close"
-                                                  
-                                                  >
+                                                <button 
+                                                type='submit' 
+                                                className='btn btn-sm btn-primary me-3' 
+                                                form='kt_create_account_form'
+                                                data-bs-dismiss={`${stepper.current?.currentStepIndex === 3 && 'modal'}`}                                                          
+                                                aria-label="Close"
+                                                >
+                                                  <span className='indicator-label'>
                                                     {stepper.current?.currentStepIndex !==
-                                                      stepper.current?.totatStepsNumber! && 'Continue'}
+                                                      3 && 'Continue'}
                                                     {stepper.current?.currentStepIndex ===
-                                                      stepper.current?.totatStepsNumber! && 'Submit'}
+                                                      3 && 'Submit'}
                                                     <KTSVG
                                                       path='/media/icons/duotune/arrows/arr064.svg'
                                                       className='svg-icon-3 ms-2 me-0'

@@ -52,6 +52,8 @@ export * from './charts/ChartsWidget7'
 export * from './charts/ChartsWidget8'
 
 // tables
+export * from './tables/ArValidProductsTable'
+export * from './tables/ViewMethodsTable'
 export * from './tables/TablesWidget1'
 export * from './tables/TablesWidget2'
 export * from './tables/TablesWidget3'

@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import {KTSVG} from '../../../helpers'
+import  {ArValidProductsTable} from '../../../../_metronic/partials/widgets'
+
 
 type Props = {
   className: string
@@ -180,7 +182,36 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                 </td>
                 {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$3560</td> */}
                 <td>
-                  <span className='badge badge-light-success'>15 From 1,000</span>
+                  <span >
+                  <a className="badge badge-light-success" href='#'data-bs-toggle="modal" data-bs-target="#kt_modal_valid_products" >15 From 1,000</a>
+                  </span>
+                       
+                  {/* begin::Action Modal Box*/}                
+                  <div className="modal fade" tabIndex={-1} id="kt_modal_valid_products">
+                          <div className="modal-dialog mt-20">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h5 className="modal-title"> </h5>
+                                <div
+                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <KTSVG
+                                    path="/media/icons/duotune/arrows/arr061.svg"
+                                    className="svg-icon svg-icon-2x"
+                                  />
+                                </div>
+                              </div>
+                              <div className="text-start modal-body pt-2 pb-0">                            
+                                <ArValidProductsTable className='card-xl-stretch mb-5 mb-xl-8' />
+                              </div>
+
+                              
+                            </div>
+                          </div>
+                        </div>
+                   {/* end::Action Modal Box */}
                 </td>
                 <td className='text-end'>
                   {/* <a
@@ -222,7 +253,7 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                                   />
                                 </div>
                               </div>
-                            <div className="text-start modal-body">
+                            <div className="text-start modal-body pt-2">
                               <div className="mb-10">
                                 <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
                                 <select className="form-select form-select-solid" aria-label="Select example">
@@ -293,6 +324,8 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-7'>
                     15 From 250
                   </a>
+                      
+
                   {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span> */}
                 </td>
                 <td>
@@ -305,7 +338,35 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                 </td>
                 {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$4850</td> */}
                 <td>
-                  <span className='badge badge-light-danger'>0 From 1,000</span>
+                  <span>
+                  <a className="badge badge-light-danger" href='#'data-bs-toggle="modal" data-bs-target="#kt_modal_valid_products" >0 From 1,000</a>
+                  </span>
+                  {/* begin::Action Modal Box*/}                
+                  <div className="modal fade" tabIndex={-1} id="kt_modal_valid_products">
+                          <div className="modal-dialog mt-20">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h5 className="modal-title">Valid Products</h5>
+                                <div
+                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <KTSVG
+                                    path="/media/icons/duotune/arrows/arr061.svg"
+                                    className="svg-icon svg-icon-2x"
+                                  />
+                                </div>
+                              </div>
+                              <div className="text-start modal-body pt-2 pb-0">                            
+                                <ArValidProductsTable className='card-xl-stretch mb-5 mb-xl-8' />
+                              </div>
+
+                              
+                            </div>
+                          </div>
+                        </div>
+                   {/* end::Action Modal Box */}
                 </td>
                 <td className='text-end'>
                   {/* <a
@@ -346,7 +407,7 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                                   />
                                 </div>
                               </div>
-                              <div className="text-start modal-body">
+                              <div className="text-start modal-body pt-2">
                                 <div className="mb-10">
                                   <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>   
                                   <select className="form-select form-select-solid" aria-label="Select example">
