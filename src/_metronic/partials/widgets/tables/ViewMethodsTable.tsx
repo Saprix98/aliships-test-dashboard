@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTSVG} from '../../../helpers'
+// import {KTSVG} from '../../../helpers'
 
 type Props = {
   className: string
@@ -17,12 +17,12 @@ const ViewMethodsTable: React.FC<Props> = ({className}) => {
           {/* begin::Table */}
           <table className='table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3'>
             {/* begin::Table head */}
-            <thead className='border-bottom-1'>
+            <thead className='border-bottom-1 bg-light rounded-end rounded-start'>
               <tr className='text-muted'>
-                <th className='min-w-175px'>Shipping Name</th>
+                <th className='min-w-175px ps-4 rounded-start'>Shipping Name</th>
                 <th className='min-w-150px'>ETA</th>
                 <th className='min-w-150px'>Tracking</th>
-                <th className='min-w-125px'>Price</th>
+                <th className='min-w-100px pe-4'>Price</th>
                 
                 {/* <th className='min-w-120px'></th> */}
                
@@ -51,7 +51,7 @@ const ViewMethodsTable: React.FC<Props> = ({className}) => {
                  
                 </td>
                 <td>
-                  <span className='text-dark  text-hover-primary d-block mb-1 fs-7'>
+                  <span className='text-dark fw-bold text-hover-primary d-block mb-1 fs-7'>
                     1.25$
                   </span>
                   
@@ -79,7 +79,7 @@ const ViewMethodsTable: React.FC<Props> = ({className}) => {
                
                 </td>
                 <td>
-                  <span className='text-dark  text-hover-primary d-block mb-1 fs-7'>
+                  <span className='text-dark fw-bold text-hover-primary d-block mb-1 fs-7'>
                     0.75$
                   </span>
                   
@@ -107,7 +107,7 @@ const ViewMethodsTable: React.FC<Props> = ({className}) => {
                 </td>
 
                 <td>
-                  <span className='text-dark  text-hover-primary d-block mb-1 fs-7'>
+                  <span className='text-dark fw-bold text-hover-primary d-block mb-1 fs-7'>
                     25.50$
                   </span>
                  
@@ -135,7 +135,7 @@ const ViewMethodsTable: React.FC<Props> = ({className}) => {
                  
                 </td>
                 <td>
-                  <span className='text-dark  text-hover-primary d-block mb-1 fs-7'>
+                  <span className='text-dark fw-bold text-hover-primary d-block mb-1 fs-7'>
                     32.00$
                   </span>
                 

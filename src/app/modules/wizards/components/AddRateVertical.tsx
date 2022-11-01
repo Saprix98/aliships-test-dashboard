@@ -53,8 +53,8 @@ const AddRateVertical = () => {
   return (
 
     
-    <div className="modal fade mw-auto mt-10" tabIndex={-1} id="kt_modal_2">
-          <div className="modal-dialog mw-75 m-auto mt-5 mt-sm-8">
+    <div className="modal fade mw-auto" tabIndex={-1} id="kt_modal_2">
+          <div className="modal-dialog mw-75 m-auto mt-20">
               <div className="modal-content">
                               <div className="modal-header">
                                 <h5 className="modal-title">Edit Service</h5>

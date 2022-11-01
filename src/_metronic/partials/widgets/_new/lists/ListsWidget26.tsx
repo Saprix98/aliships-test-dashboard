@@ -9,7 +9,11 @@ type Props = {
 const rows: Array<{description: string}> = [
   {description: 'Avg. Client Rating'},
   {description: 'Instagram Followers'},
-  {description: 'Google Ads CPC'},
+  {description: 'Twitter Ads CPC'},
+  {description: 'YouTube How to upload'},
+  {description: 'Google Sheets Example'},
+  {description: 'AliShips How To set up'},
+  {description: 'How to use conditions?'},
 ]
 
 const ListsWidget26 = ({className}: Props) => (

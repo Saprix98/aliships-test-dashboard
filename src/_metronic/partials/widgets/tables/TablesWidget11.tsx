@@ -2,6 +2,7 @@
 import React from 'react'
 import {KTSVG, toAbsoluteUrl} from '../../../helpers'
 import {ViewMethodsTable} from '../../../../_metronic/partials/widgets'
+import {EditProductModal} from '../../../../app/pages/get ships/EditProductModal'
 
 type Props = {
   className: string
@@ -94,7 +95,7 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                    {/* begin::Action Modal Box*/}
 
                         <div className="modal fade" tabIndex={-1} id="kt_modal_view_methods">
-                          <div className="modal-dialog">
+                          <div className="modal-dialog mw-md-700px mw-sm-550px mt-20">
                             <div className="modal-content">
                               <div className="modal-header">
                                 <h5 className="modal-title">Select Country: </h5>
@@ -116,7 +117,7 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                                 </div>
                               </div>
                               <div className="text-start modal-body">
-                                <div className='israel-results'>
+                                <div className='israel-results'>                                                                                                   
                                    <ViewMethodsTable className='mb-5 mb-xl-8'/>
                                 </div>
 
@@ -130,10 +131,49 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                   
                   <a
                     href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
+                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1' data-bs-toggle="modal"  data-bs-target="#kt_modal_edit_methods"
                   >
                     <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
                   </a>
+
+                    {/* begin::Action Modal Box*/}
+
+                    <div className="modal fade" tabIndex={-1} id="kt_modal_edit_methods">
+                          <div className="modal-dialog mw-md-700px mw-sm-550px mt-20">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h5 className="modal-title">Edit Product mapping</h5>
+                                
+                                <div
+                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <KTSVG
+                                    path="/media/icons/duotune/arrows/arr061.svg"
+                                    className="svg-icon svg-icon-2x"
+                                  />
+                                </div>
+                              </div>
+                              <div className="text-start modal-body">
+                                <div className='israel-results'>                                                                                                   
+                               < EditProductModal
+                                    productImg='/media/stock/600x400/img-26.jpg'
+                                    productName='Sant Extreanet Solution'
+                                    source='DSers / AliExpress'
+                                    aliUrl='Https://aliexpress.com/item/1005004701491801.html/'
+                                    // totalEarnings='$236,400'
+                               />
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   {/* end::Action Modal Box */}
+
+
+
                   <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
                     <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
                   </a>

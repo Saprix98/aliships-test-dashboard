@@ -237,8 +237,8 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                           <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
                        </button>
 
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
+                        <div className=" modal fade" tabIndex={-1} id="kt_modal_1">
+                          <div className="modal-dialog mt-20">
                             <div className="modal-content">
                               <div className="modal-header">
                                 <h5 className="modal-title">Edit Service</h5>
@@ -391,8 +391,8 @@ const AddRateTable: React.FC<Props> = ({className}) => {
                           <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
                        </button>
 
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
+                        <div className=" modal fade" tabIndex={-1} id="kt_modal_1">
+                          <div className="modal-dialog mt-20">
                             <div className="modal-content">
                               <div className="modal-header">
                                 <h5 className="modal-title">Edit Service</h5>
