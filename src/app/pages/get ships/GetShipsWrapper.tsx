@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import {FC} from 'react'
+import {FC, useState} from 'react'
 // import {useIntl} from 'react-intl'
 // import {Route, Routes, Outlet, Navigate} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
@@ -10,6 +10,8 @@ import {
   CardsWidget17,
   AddRateWidget1
 } from '../../../_metronic/partials/widgets'
+import { EditProductModal } from './EditProductModal'
+import JsonData from '../../../app/pages/get ships/get-ships.json'
 // import { VideoWidget1 } from '../../../_metronic/partials/widgets/_new/cards/VideoWidget1'
 
 const DashboardBreadCrumbs: Array<PageLink> = [
@@ -29,6 +31,7 @@ const DashboardBreadCrumbs: Array<PageLink> = [
 
 
 const GetShipsPage: FC = () => (
+  
   <>
    {/* begin::Row */}
    <div className='row g-5 g-xl-8'>
@@ -86,7 +89,21 @@ const GetShipsPage: FC = () => (
      </div>
     {/* end::Row */}
 
-      <TablesWidget11 className='mb-5 mb-xl-8' />
+      <TablesWidget11 className='mb-5 mb-xl-8'/>
+      
+      {JsonData.map((data) =>{
+        console.log(data)
+        return (
+          <EditProductModal 
+            modID={data.id} 
+            productImg={data.prodImg} 
+            productName={data.prodName} 
+            source={data.prodDesc} 
+            aliUrl={data.aliUrl}
+          />
+        )
+      })}
+  
   </>
 )
 

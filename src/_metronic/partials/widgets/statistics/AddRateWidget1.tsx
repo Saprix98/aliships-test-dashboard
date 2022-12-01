@@ -8,6 +8,7 @@ import {
   AddRateTable
   // CardsWidget17
 } from '../../widgets'
+import {EditRate} from '../../../../app/pages/get ships/EditRate'
 
 type Props = {
   className: string
@@ -29,12 +30,12 @@ const AddRateWidget1: React.FC<Props> = ({className, image, title, time, descrip
     >
       {/* begin::Body */}
       <div className='card-body pt-5 pb-0'>
-        <div className="card-header border-0 p-0 mt-0 ">
+        <div className="card-header border-0 p-0 mt-0 flex-nowrap">
         <h3 className='card-title flex-column justify-content-start mt-0 '>
           <span className='card-label fw-bold text-dark'>{title}</span>
           <span className='text-muted mt-1 fw-semibold fs-7' dangerouslySetInnerHTML={{__html: description}}></span>
         </h3>
-        <div className='col-6 ' >  {/* mt-5 mt-sm-n5 mb-xl-10 me-4 position-relativ position-sm-absolute end-0 top-25 */}
+        <div className='col-6 text-end' >  {/* mt-5 mt-sm-n5 mb-xl-10 me-4 position-relativ position-sm-absolute end-0 top-25 */}
            <button 
              type='submit' 
              className='btn btn-sm btn-primary me-3 float-sm-end'
@@ -60,6 +61,7 @@ const AddRateWidget1: React.FC<Props> = ({className, image, title, time, descrip
             top: 35%; */}
         
        <AddRateTable className='' />
+       
      </div> 
       
       {/* end::Body */}

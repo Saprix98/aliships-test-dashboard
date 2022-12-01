@@ -1,12 +1,150 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import {KTSVG} from '../../../helpers'
+import JsonData from '../../../../app/pages/shipping-companies/shipping-companies.json'
 
 type Props = {
   className: string
 }
 
 const TablesWidget13: React.FC<Props> = ({className}) => {
+  const DisplayData=JsonData.map(
+    (info)=>{
+        return(
+          <tr>
+                <td>
+                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
+                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
+                  </div>
+                </td>
+                <td>
+                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                    {info.ServiceName}
+                  </a>
+                </td>
+                <td>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  {info.originalName}
+                  </a>
+                  <span className='text-muted fw-semibold text-muted d-block fs-7'></span>
+                </td>
+                <td>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  {info.initialName}
+                  </a>
+                  <span className='text-muted fw-semibold text-muted d-block fs-7'></span>
+                </td>
+                <td>
+                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
+                  {info.countries}
+                  </a>
+                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                   
+                  </span>
+                </td>
+                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$3560</td> */}
+                <td>
+                  <span className={`badge ${info.statusStyle}`}>{info.shippingStatus}</span>
+                </td>
+                <td className='text-end'>
+                  {/* <a
+                    href='#'
+                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
+                  >
+                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
+                  </a> */}
+                  {/* <a
+                    href='#'
+                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
+                  >
+                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
+                  </a> */}
+                  
+                  
+                  {/* begin::Action Modal Box*/}
+                  <button type="button"
+                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#kt_modal_1"
+                        >
+                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
+                       </button>
+
+                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
+                          <div className="modal-dialog">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h5 className="modal-title">Edit Service</h5>
+                                <div
+                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <KTSVG
+                                    path="/media/icons/duotune/arrows/arr061.svg"
+                                    className="svg-icon svg-icon-2x"
+                                  />
+                                </div>
+                              </div>
+                            <div className="text-start modal-body">
+                              <div className="mb-10">
+                                <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
+                                <select className="form-select form-select-solid" aria-label="Select example">
+                                  <option>Open this select menu</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+
+                                <div className="mb-10">
+                                    <label htmlFor="exampleFormControlInput1" className="required form-label">New Name</label>
+                                    <input type="email" className="form-control form-control-solid" placeholder="Standard Shipping"/>
+                                </div>
+                              
+
+                              <div className="mb-10">
+                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
+                                <div className="form-check form-switch form-check-custom form-check-solid">
+                                  <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
+                                  <label className="form-check-label" htmlFor="flexSwitchDefault">
+                                  Publish
+                                  </label>
+                                </div>
+                              </div>  
+                            </div>
+
+                              <div className="modal-footer">
+                                <button
+                                  type="button"
+                                  className="btn btn-light"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
+                                  Save changes
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   {/* end::Action Modal Box */}
+
+                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
+                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
+                  </a>
+                </td>
+              </tr>
+
+
+
+
+        )
+    }
+  )
+
+
   return (
     <div className={`card ${className}`}>
       {/* begin::Header */}
@@ -150,625 +288,7 @@ const TablesWidget13: React.FC<Props> = ({className}) => {
             {/* end::Table head */}
             {/* begin::Table body */}
             <tbody>
-              <tr>
-                <td>
-                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
-                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
-                  </div>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                    56037-XDER
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Brasil
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: PH</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    05/28/2020
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Intertico
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Web, UI/UX Design
-                  </span>
-                </td>
-                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$3560</td> */}
-                <td>
-                  <span className='badge badge-light-success'>Published</span>
-                </td>
-                <td className='text-end'>
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
-                  </a> */}
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
-                  </a> */}
-                  
-                  
-                  {/* begin::Action Modal Box*/}
-                  <button type="button"
-                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_1"
-                        >
-                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
-                       </button>
-
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h5 className="modal-title">Edit Service</h5>
-                                <div
-                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                >
-                                  <KTSVG
-                                    path="/media/icons/duotune/arrows/arr061.svg"
-                                    className="svg-icon svg-icon-2x"
-                                  />
-                                </div>
-                              </div>
-                            <div className="text-start modal-body">
-                              <div className="mb-10">
-                                <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
-                                <select className="form-select form-select-solid" aria-label="Select example">
-                                  <option>Open this select menu</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                              </div>
-
-                                <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">New Name</label>
-                                    <input type="email" className="form-control form-control-solid" placeholder="Standard Shipping"/>
-                                </div>
-                              
-
-                              <div className="mb-10">
-                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
-                                <div className="form-check form-switch form-check-custom form-check-solid">
-                                  <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
-                                  <label className="form-check-label" htmlFor="flexSwitchDefault">
-                                  Publish
-                                  </label>
-                                </div>
-                              </div>  
-                            </div>
-
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-light"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
-                                  Save changes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                   {/* end::Action Modal Box */}
-
-                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
-                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
-                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
-                  </div>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                    05822-FXSP
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Belarus
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: BY</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    04/18/2021
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Agoda
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Houses &amp; Hotels
-                  </span>
-                </td>
-                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$4850</td> */}
-                <td>
-                  <span className='badge badge-light-danger'>Unpublished</span>
-                </td>
-                <td className='text-end'>
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
-                  </a> */}
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
-                  </a> */}
-
-                  {/* begin::Action Modal Box*/}
-                  <button type="button"
-                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_1"
-                        >
-                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
-                       </button>
-
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h5 className="modal-title">Edit Service</h5>
-                                <div
-                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                >
-                                  <KTSVG
-                                    path="/media/icons/duotune/arrows/arr061.svg"
-                                    className="svg-icon svg-icon-2x"
-                                  />
-                                </div>
-                              </div>
-                              <div className="text-start modal-body">
-                                <div className="mb-10">
-                                  <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>   
-                                  <select className="form-select form-select-solid" aria-label="Select example">
-                                    <option>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                                </div>
-
-                                  <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">Example</label>
-                                    <input type="email" className="form-control form-control-solid" placeholder="Example input"/>
-                                  </div>
-                              
-
-                                <div className="mb-10">
-                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
-                                 <div className="form-check form-switch form-check-custom form-check-solid">
-                                    <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
-                                    <label className="form-check-label" htmlFor="flexSwitchDefault">
-                                    Publish
-                                    </label>
-                                  </div>
-                                </div>  
-                              </div>
-
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-light"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
-                                  Save changes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                   {/* end::Action Modal Box */}
-
-                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
-                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
-                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
-                  </div>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                    4472-QREX
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Phillipines
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: BH</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    07/23/2019
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    RoadGee
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Transportation</span>
-                </td>
-                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$8376</td> */}
-                <td>
-                  <span className='badge badge-light-success'>Published</span>
-                </td>
-                <td className='text-end'>
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
-                  </a> */}
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
-                  </a> */}
-
-                  {/* begin::Action Modal Box*/}
-                  <button type="button"
-                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_1"
-                        >
-                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
-                       </button>
-
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h5 className="modal-title">Edit Service</h5>
-                                <div
-                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                >
-                                  <KTSVG
-                                    path="/media/icons/duotune/arrows/arr061.svg"
-                                    className="svg-icon svg-icon-2x"
-                                  />
-                                </div>
-                              </div>
-                              <div className="text-start modal-body">
-                                <div className="mb-10">
-                                  <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
-                                  <select className="form-select form-select-solid" aria-label="Select example">
-                                    <option>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                                </div>
-
-                                <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">Example</label>
-                                    <input type="email" className="form-control form-control-solid" placeholder="Example input"/>
-                                </div>
-                              
-
-                                <div className="mb-10">
-                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
-                                <div className="form-check form-switch form-check-custom form-check-solid">
-                                    <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
-                                    <label className="form-check-label" htmlFor="flexSwitchDefault">
-                                    Publish
-                                    </label>
-                                </div>
-                                </div>  
-                              </div>
-
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-light"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
-                                  Save changes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                   {/* end::Action Modal Box */}
-
-                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
-                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
-                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
-                  </div>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                    00347-BCLQ
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Argentina
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: BR</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    12/21/2021
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    The Hill
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
-                </td>
-                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$9486</td> */}
-                <td>
-                  <span className='badge badge-light-danger'>Unpublished</span>
-                </td>
-                <td className='text-end'>
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
-                  </a> */}
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
-                  </a> */}
-
-                      {/* begin::Action Modal Box*/}
-                        <button type="button"
-                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_1"
-                        >
-                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
-                       </button>
-
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h5 className="modal-title">Edit Service</h5>
-                                <div
-                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                >
-                                  <KTSVG
-                                    path="/media/icons/duotune/arrows/arr061.svg"
-                                    className="svg-icon svg-icon-2x"
-                                  />
-                                </div>
-                              </div>
-                              <div className="text-start modal-body">
-
-                                <div className="mb-10">
-                                  <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
-                                  <select className="form-select form-select-solid" aria-label="Select example">
-                                    <option>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                                </div>
-                                
-                                <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">Example</label>
-                                    <input type="email" className="form-control form-control-solid" placeholder="Example input"/>
-                                </div>
-                              
-
-                                <div className="mb-10">
-                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
-                                <div className="form-check form-switch form-check-custom form-check-solid">
-                                    <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
-                                    <label className="form-check-label" htmlFor="flexSwitchDefault">
-                                        Publish
-                                    </label>
-                                </div>
-                                </div>  
-                              </div>
-
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-light"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
-                                  Save changes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                   {/* end::Action Modal Box */}
-
-
-                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
-                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
-                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
-                  </div>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                    59486-XDER
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Agoda
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: BT</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    05/28/2020
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Code: Paid</span>
-                </td>
-                <td>
-                  <a href='#' className='text-dark fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    Phillipines
-                  </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Transportation</span>
-                </td>
-                {/* <td className='text-dark fw-bold text-hover-primary fs-6'>$8476</td> */}
-                <td>
-                  <span className='badge badge-light-success'>Published</span>
-                </td>
-                <td className='text-end'>
-                  {/* <a
-                    href='#'
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/general/gen019.svg' className='svg-icon-3' />
-                  </a> */}
-                  {/* <a
-                    href='#'
-                    data-bs-target="#kt_modal_1"
-                    data-bs-toggle="modal"
-                    className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
-                  >
-                    <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
-                  </a> */}
-                 
-                  {/* begin::Action Modal Box*/}
-                       <button type="button"
-                          className="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_1"
-                        >
-                          <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />                         
-                       </button>
-
-                        <div className="top-25 modal fade" tabIndex={-1} id="kt_modal_1">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h5 className="modal-title">Edit Service</h5>
-                                <div
-                                  className="btn btn-icon btn-sm btn-active-light-primary ms-2"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                >
-                                  <KTSVG
-                                    path="/media/icons/duotune/arrows/arr061.svg"
-                                    className="svg-icon svg-icon-2x"
-                                  />
-                                </div>
-                              </div>
-                              <div className="text-start modal-body">
-
-                                  <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">Countries</label>
-                                    <select className="form-select form-select-solid" aria-label="Select example">
-                                      <option>Open this select menu</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
-                                    </select>
-                                  </div>
-
-                                <div className="mb-10">
-                                    <label htmlFor="exampleFormControlInput1" className="required form-label">Example</label>
-                                    <input type="email" className="form-control form-control-solid" placeholder="Example input"/>
-                                </div>
-                              
-                              
-                                <div className="mb-10">
-                                 <label htmlFor="exampleFormControlInput1" className="required form-label mb-5">Show Service</label><br></br>
-                                <div className="form-check form-switch form-check-custom form-check-solid">
-                                    <input className="form-check-input" type="checkbox" value="" id="flexSwitchDefault"/>
-                                    <label className="form-check-label" htmlFor="flexSwitchDefault">
-                                        Publish
-                                    </label>
-                                </div>
-                                </div>  
-                              </div>
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-light"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                                <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
-                                  Save changes
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                   {/* end::Action Modal Box */}
-
-                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
-                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
-                  </a>
-                </td>
-              </tr>
+             {DisplayData}
             </tbody>
             {/* end::Table body */}
           </table>

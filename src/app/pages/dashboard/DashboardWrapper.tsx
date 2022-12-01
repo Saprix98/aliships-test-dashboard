@@ -82,7 +82,7 @@ const DashboardPage: FC = () => (
         </div>
         <div
       id="kt_accordion_2_item_1"
-      className="fs-6 collapse ps-10 card py-10 border border-top-1 border-light"
+      className="fs-6 collapse card p-10 border-top"
       data-bs-parent="#kt_accordion_2"
     >
       Lorem Ipsum is simply dummy text of the printing and

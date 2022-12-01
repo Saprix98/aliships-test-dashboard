@@ -1,0 +1,127 @@
+[
+    {
+        "id": 1,
+        "originalName": "Cainiao Super Economy",
+        "initialName": "Cainiao Economy",
+        "NameChinese": "菜鸟超级经济",
+        "ServiceName": "CAINIAO_SUPER_ECONOMY",
+        "countries": "250 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 2,
+        "originalName": "China Post Ordinary Small Packet Plus",
+        "initialName": "Ordinary Small Packet Plus",
+        "NameChinese": "中国邮政平常小包+",
+        "ServiceName": "YANWEN_JYT",
+        "countries": "99 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      },
+      {
+        "id": 3,
+        "originalName": "4PX Singapore Post OM Pro",
+        "initialName": "Singapore Post OM",
+        "NameChinese": "4PX新邮经济小包",
+        "ServiceName": "SGP_OMP",
+        "countries": "100 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 4,
+        "originalName": "Correos Economy",
+        "initialName": "Correos Economy",
+        "NameChinese": "中外运-西邮经济小包",
+        "ServiceName": "SINOTRANS_PY",
+        "countries": "0 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      },
+      {
+        "id": 5,
+        "originalName": "Royal Mail Economy",
+        "initialName": "Mail Economy",
+        "NameChinese": "中外运-英邮经济小包",
+        "ServiceName": "ROYAL_MAIL_PY",
+        "countries": "11 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 6,
+        "originalName": "SF Economic Air Mail",
+        "initialName": "Economic Air Mail",
+        "NameChinese": "顺丰国际经济小包",
+        "ServiceName": "SF_EPARCEL_OM",
+        "countries": "69 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      },
+      {
+        "id": 7,
+        "originalName": "SunYou Economic Air Mail",
+        "initialName": "Economic Air Mail",
+        "NameChinese": "顺友航空经济小包",
+        "ServiceName": "SUNYOU_ECONOMY",
+        "countries": "27 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 8,
+        "originalName": "Yanwen Economic Air Mail",
+        "initialName": "Economic Air Mail",
+        "NameChinese": "燕文航空经济小包",
+        "ServiceName": "YANWEN_ECONOMY",
+        "countries": "5 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      },
+      {
+        "id": 9,
+        "Level": "简易",
+        "originalName": "AliExpress Saver Shipping",
+        "initialName": "Saver Shipping",
+        "NameChinese": "AliExpress无忧物流-简易",
+        "ServiceName": "CAINIAO_ECONOMY",
+        "countries": "15 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 10,
+        "Level": "标准",
+        "originalName": "AliExpress Standard Shipping",
+        "initialName": "Standard Shipping",
+        "NameChinese": "AliExpress无忧物流-标准",
+        "ServiceName": "CAINIAO_STANDARD",
+        "countries": "10 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      },
+      {
+        "id": 11,
+        "Level": "标准",
+        "originalName": "AliExpress PUDO Shipping",
+        "initialName": "PUDO Shipping",
+        "NameChinese": "AliExpress无忧物流-自提",
+        "ServiceName": "CAINIAO_STATION",
+        "countries": "50 From 250",
+        "shippingStatus": "Published",
+        "statusStyle": "badge-light-success" 
+      },
+      {
+        "id": 12,
+        "Level": "标准",
+        "originalName": "Aliexpress Direct",
+        "initialName": "Direct Shipping",
+        "NameChinese": "无忧集运-沙特",
+        "ServiceName": "CAINIAO_CONSOLIDATION_SA",
+        "countries": "150 From 250",
+        "shippingStatus": "Unpublished",
+        "statusStyle": "badge-light-danger" 
+      }
+]
+
